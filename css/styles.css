@@ -1,0 +1,69 @@
+html {
+  background-image: linear-gradient(to top right,
+      #56F7F5,
+      #6A359C);
+  height: 100%;
+  font-family: 'verdana';
+}
+
+.container {
+  width: 450px;
+  margin: 0 auto;
+  background: white;
+  margin-top: 80px;
+  padding: 30px 20px;
+}
+
+#header {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 50px;
+  font-size: 25px;
+}
+
+.List-item {
+  position: relative;
+  margin: 20px 0;
+  padding: 15px 20px;
+  border-radius: 20px;
+  background-color: #F8F8F8;
+}
+
+.List-item:hover {
+  background-color: #F1F1F1;
+}
+
+.List-item div {
+  transition: 3s;
+  border: 1px solid gray;
+}
+
+input {
+  cursor: pointer;
+  z-index: 1;
+  opacity: 0;
+}
+
+.List-item div, input {
+  position: absolute;
+  margin-top: -2px;
+  right: 20px;
+  width: 23px;
+  height: 23px;
+}
+
+input:checked~span {
+  text-decoration: line-through;
+}
+
+input:checked~div {
+  background: #0C73B2;
+  color: white;
+  border: 1px solid #C1CBE8;
+}
+
+input:checked~div:before {
+  content: '\2713';
+  position: absolute;
+  left: 5px;
+}
